@@ -3,7 +3,7 @@ import React from "react";
 function TopProducts (){
     return(
         <div>
-            <h1 className="Texto-TopProducts">Top Products</h1>
+            <p className="Texto-TopProducts">TOP PRODUCTS</p>
         </div>
     )
 }

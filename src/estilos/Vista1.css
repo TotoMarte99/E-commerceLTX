@@ -1,13 +1,9 @@
-.container-img{
-    display: flex;
-    flex-direction: column;
-    background-color: #858585;
-   
-}
 .img{
     width: 100%;
-    box-shadow: 2px 30px 50px black;
+    
 }
+
+    
 
 
 
