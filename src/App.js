@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from './componentes/Navbar'
+import './App.css'
+import './estilos/Navbar.css'
+import Vista from './componentes/Vista1'
+import './estilos/Vista1.css'
+import TopProducts from './componentes/TopProducts';
+import './estilos/TopProducts.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+function App(){
+  return(
+    <div>
+      <div>
+      <Navbar />
+      </div>
+      <div>
+        <Vista />
+      </div>
+      <section>
+        <TopProducts />
+      </section>
     </div>
-  );
+  )
 }
-
-export default App;
+export default App
