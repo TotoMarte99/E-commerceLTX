@@ -4,9 +4,8 @@ import './App.css'
 import './estilos/Navbar.css'
 import Vista from './componentes/Vista1'
 import './estilos/Vista1.css'
-import TopProducts from './componentes/TopProducts';
 import './estilos/TopProducts.css'
-
+import Cards from './componentes/Cards'
 
 function App(){
   return(
@@ -17,9 +16,10 @@ function App(){
       <div>
         <Vista />
       </div>
-      <section>
-        <TopProducts />
-      </section>
+        <div>
+            <p className="Texto-TopProducts">TOP PRODUCTS</p>
+        </div>
+        <Cards/>
     </div>
   )
 }

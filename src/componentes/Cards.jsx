@@ -1,54 +1,25 @@
-import * as React from 'react';
-import AspectRatio from '@mui/joy/AspectRatio';
-import Box from '@mui/joy/Box';
-import Button from '@mui/joy/Button';
-import Card from '@mui/joy/Card';
-import IconButton from '@mui/joy/IconButton';
-import Typography from '@mui/joy/Typography';
-import BookmarkAdd from '@mui/icons-material/BookmarkAddOutlined';
+import React from 'react';
+import Card from './Card';
+import Reloj1 from '../Fotos relojes/Digitales/Reloj_Smartwatch_Amazfit_GTS_2_Mini_40mm_Black_by_XIAOMI_tab_1.png';
+import Reloj2 from '../Fotos relojes/Digitales/xiaomi-pulsera-de-actividad-mi-band-6.jpg';
+import Reloj3 from '../Fotos relojes/Digitales/Casuales/SAN-40-10.jpg';
 
-export default function BasicCard() {
-  return (
-    <Card variant="outlined" sx={{ minWidth: '320px' }}>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
-        <Typography level="h2" fontSize="md" sx={{ alignSelf: 'flex-start' }}>
-          Yosemite National Park
-        </Typography>
-        <Typography level="body2">April 24 to May 02, 2021</Typography>
-      </Box>
-      <IconButton
-        aria-label="bookmark Bahamas Islands"
-        variant="plain"
-        color="neutral"
-        size="sm"
-        sx={{ position: 'absolute', top: '0.5rem', right: '0.5rem' }}
-      >
-        <BookmarkAdd />
-      </IconButton>
 
-      <AspectRatio minHeight="120px" maxHeight="200px" sx={{ my: 2 }}>
-        <img
-          src="https://images.unsplash.com/photo-1527549993586-dff825b37782?crop=entropy&auto=format&fit=crop&w=3270"
-          alt=""
-        />
-      </AspectRatio>
-      <Box sx={{ display: 'flex' }}>
-        <div>
-          <Typography level="body3">Total price:</Typography>
-          <Typography fontSize="lg" fontWeight="lg">
-            $2900
-          </Typography>
+function Cards(){
+    return(
+        <div className='CardsBox'>
+            <div>
+                <Card src={Reloj1} Title="Xiaomi Band 8" Text="10' Touch Screen, NFC tecnology, +10 days battery"/>
+            </div>
+            <div>
+                <Card src={Reloj2}  Title="Xiaomi MI Samrt Band 6" Text="1.56' Amoled Screen, Withstands up to 50m underwater, "/>
+            </div>
+            <div>
+                <Card src={Reloj3} Tittle="Casio Sport" Text="Water resistant, Classic clock functions, and more functions,"/>
+            </div> 
         </div>
-        <Button
-          variant="solid"
-          size="sm"
-          color="primary"
-          aria-label="Explore Bahamas Islands"
-          sx={{ ml: 'auto', fontWeight: 600 }}
-        >
-          Explore
-        </Button>
-      </Box>
-    </Card>
-  );
+        
+
+    )
 }
+export default Cards;

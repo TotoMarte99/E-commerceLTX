@@ -26,10 +26,10 @@ function Navegacion(){
           </Nav>
           <Nav>
             <Nav>
-              <Button className='btn-Login'  variant="outline-secondary">Login</Button>{' '}
+              <Button className='btn-Login rounded-0'  variant="outline-secondary">Login</Button>{' '}
             </Nav>
             <Nav>
-              <Button className='btn-Login'  variant="outline-secondary">Sing Up</Button>{' '}
+              <Button className='btn-Login rounded-0'  variant="outline-secondary">Sing Up</Button>{' '}
             </Nav>
           </Nav>
           <Nav.Link id="carrito-section" href="#carito">
