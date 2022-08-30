@@ -9,3 +9,31 @@ body{
   
 
 }
+.link_all{
+  text-decoration: none;
+}
+.Texto-TopProducts2{
+  color: #212529;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+  background-color: #f1bd59;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 80px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.Texto-TopProducts2:hover{
+  box-shadow: 1px 8px 9px whitesmoke;
+}
+
+@media screen and (min-device-width: 200px) and (max-device-width: 417px) {
+  .Texto-TopProducts2{
+    font-size: 12px;
+    width: 200px;
+  }
+}

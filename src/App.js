@@ -2,24 +2,28 @@ import React from 'react';
 import Navbar from './componentes/Navbar'
 import './App.css'
 import './estilos/Navbar.css'
-import Vista from './componentes/Vista1'
+import Vista from './componentes/FirstImage'
 import './estilos/Vista1.css'
-import './estilos/TopProducts.css'
-import Cards from './componentes/Cards'
+import './estilos/ItemsListContainer.css'
+import ItemsListContainer from './componentes/ItemsListContainer'
+
 
 function App(){
   return(
     <div>
-      <div>
-      <Navbar />
-      </div>
-      <div>
+      <>
+        <Navbar />
+      </>
+      <>
         <Vista />
-      </div>
-        <div>
-            <p className="Texto-TopProducts">TOP PRODUCTS</p>
-        </div>
-        <Cards/>
+      </>
+        <>
+          <h3 className="Texto-TopProducts">TOP PRODUCTS</h3>
+        </>
+        <ItemsListContainer/>
+        <>
+          <a className='link_all' href="#home"><h3 className="Texto-TopProducts2">VIEW ALL THE PRODUCTS</h3></a>
+        </>
     </div>
   )
 }

@@ -5,9 +5,7 @@ import Imagen from '../imagenes/Img.png';
 function Vista () {
     return(
         <div className="container-img">
-            <div>
-                <img className="img" src={Imagen} alt="Imagen"/>
-            </div>
+            <img className="img" src={Imagen} alt="Imagen"/>
         </div>
         
     )

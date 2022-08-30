@@ -3,10 +3,9 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import imagenCarrito from '../imagenes/carrito-de-compras.png'
 import Logo from '../imagenes/Ltxwatches-logo.png'
 import Button from 'react-bootstrap/Button';
-
+import CartWidget from './CartWidget';
 
 function Navegacion(){
   return (
@@ -32,12 +31,9 @@ function Navegacion(){
               <Button className='btn-Login rounded-0'  variant="outline-secondary">Sing Up</Button>{' '}
             </Nav>
           </Nav>
-          <Nav.Link id="carrito-section" href="#carito">
-              <img src={imagenCarrito} className="ImgCarrito-NavBar" alt="carrito"></img>
-              <div className='Conteo-Carrito'>
-                <small>0</small>
-              </div>
-            </Nav.Link>
+          <Nav.Link id="carrito-section" href="#car">
+             <CartWidget />
+          </Nav.Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>
