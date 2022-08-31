@@ -1,26 +1,24 @@
-.ImgCarrito-NavBar{
-    width: 25px;
-    box-shadow: 2px 2px 2px 1px rgba(77, 69, 69, 0.2);
+.ImgCarrito-NavBar {
+  width: 25px;
+  box-shadow: 2px 2px 2px 1px rgba(77, 69, 69, 0.2);
 }
-#carrito-section{
-    text-align: center;
-    margin-left: 30px;
-    margin-right: 10px;
-    margin-top: 10px;
-    
+#carrito-section {
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 10px;
+  margin-top: 10px;
 }
-.btn-Login{
-    margin-left: 20px;
+.btn-Login {
+  margin-left: 20px;
 }
-.Conteo-Carrito{
-    color: rgb(27, 198, 18);
-    border-radius: 8px;
-    position: relative;
-    
+.Conteo-Carrito {
+  color: rgb(27, 198, 18);
+  border-radius: 8px;
+  position: relative;
 }
 
-@media screen and (min-device-width: 200px) and (max-device-width: 992px){
-    .btn-Login{
-        margin-top: 20px;
-    }
+@media screen and (min-device-width: 200px) and (max-device-width: 992px) {
+  .btn-Login {
+    margin-top: 20px;
+  }
 }

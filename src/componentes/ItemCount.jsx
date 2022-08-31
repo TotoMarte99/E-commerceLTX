@@ -1,46 +1,85 @@
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
+import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
+function ItemCount(props) {
+  //Creacion de la alerta para no poder agregar 0 productos al carrito//
+   const alerta = () => {
+     toast.error(`Please Add One Item`, {
+       position: "top-right",
+       autoClose: 2000,
+       hideProgressBar: false,
+       closeOnClick: true,
+       pauseOnHover: false,
+       draggable: true,
+       progress: undefined,
+     });
+   };
 
-function ItemCount(props){
-    const [rate, setRate] = useState(0);
+   const confirmacion = () =>{
+     toast.success(`You have added ${rate} products`, {
+       position: "top-right",
+       autoClose: 2000,
+       hideProgressBar: false,
+       closeOnClick: true,
+       pauseOnHover: false,
+       draggable: true,
+       progress: undefined,
+       });
+   }
 
-    const handleClickUp = () => {
-    setRate(rate+1);
+  const [rate, setRate] = useState(0);
 
-        if(rate === props.stock){
-        setRate(props.stock);
-        }
+  //Boton aumento de cantidad//
+  const handleClickUp = () => {
+    setRate(rate + 1);
+
+    if (rate === props.stock) {
+      setRate(props.stock);
     }
+  };
 
-    const handleClickDown = () => {
-    setRate(rate-1);
+  //Boton dismunicion de cantidad//
+  const handleClickDown = () => {
+    setRate(rate - 1);
 
-        if(rate <= 0){
-        setRate(0)
-        }
+    if (rate <= 0) {
+      setRate(0);
     }
+  };
 
-    const AddToCarts = () =>{
-        alert(`You have added ${rate} products to your cart`);
+  //Alerta de cantidad añadida al carrito//
+  const AddToCarts = () => {
+    confirmacion();
+    
+  };
+
+  //LLamado a la alerta y aplicacion de condicional
+  const AddToCart = () => {
+    if (rate === 0) {
+      alerta();
+     
+    } else {
+      AddToCarts();
     }
+  };
 
-    const AddToCart = () =>{
-        if(rate === 0){
-            alert(`You can't add 0 products to your cart`);
-        }else{
-            AddToCarts();
-        }
-    }
-
-    return(
-        <>
-            <Button onClick={handleClickUp} variant="warning">+</Button>
-            {rate}
-            <Button onClick={handleClickDown} variant="warning">-</Button>
-            <button onClick={AddToCart} className="btn btn-warning m-2">Add to cart</button>
-        </>
-    )
+  return (
+    <>
+      <Button onClick={handleClickUp} variant="warning">
+        +
+      </Button>
+      {rate}
+      <Button onClick={handleClickDown} variant="warning">
+        -
+      </Button>
+      <button onClick={AddToCart} className="btn btn-warning m-2">
+        Add to cart
+      </button>
+       <ToastContainer /> 
+    </>
+  );
 }
 
-export default ItemCount
+export default ItemCount;
