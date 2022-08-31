@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/E-commerceLTX/static/css/main.dd248970.css",
-    "main.js": "/E-commerceLTX/static/js/main.3297b612.js",
+    "main.css": "/E-commerceLTX/static/css/main.1e4bb79a.css",
+    "main.js": "/E-commerceLTX/static/js/main.6b84fec7.js",
     "static/media/SAN-40-10.jpg": "/E-commerceLTX/static/media/SAN-40-10.714f3757affa98852f17.jpg",
     "static/media/Img.png": "/E-commerceLTX/static/media/Img.e98803a276a19572f4b9.png",
     "static/media/Reloj_Smartwatch_Amazfit_GTS_2_Mini_40mm_Black_by_XIAOMI_tab_1.png": "/E-commerceLTX/static/media/Reloj_Smartwatch_Amazfit_GTS_2_Mini_40mm_Black_by_XIAOMI_tab_1.c62a8613276545f1994c.png",
+    "static/media/mediosdepago.png": "/E-commerceLTX/static/media/mediosdepago.316dacfab60fa90f01c8.png",
     "static/media/xiaomi-pulsera-de-actividad-mi-band-6.jpg": "/E-commerceLTX/static/media/xiaomi-pulsera-de-actividad-mi-band-6.8450994940e1d151bdf2.jpg",
     "index.html": "/E-commerceLTX/index.html",
-    "main.dd248970.css.map": "/E-commerceLTX/static/css/main.dd248970.css.map",
-    "main.3297b612.js.map": "/E-commerceLTX/static/js/main.3297b612.js.map"
+    "main.1e4bb79a.css.map": "/E-commerceLTX/static/css/main.1e4bb79a.css.map",
+    "main.6b84fec7.js.map": "/E-commerceLTX/static/js/main.6b84fec7.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd248970.css",
-    "static/js/main.3297b612.js"
+    "static/css/main.1e4bb79a.css",
+    "static/js/main.6b84fec7.js"
   ]
 }
