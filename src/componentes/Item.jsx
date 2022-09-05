@@ -1,21 +1,11 @@
-import Card from "react-bootstrap/Card";
-import ItemCount from "./ItemCount";
+import React from 'react';
+import Button from 'react-bootstrap/Button';
 
-function Item(props) {
-  return (
-    <div className="bg-color text-center">
-      <div className="container-watches">
-        <Card className="cards">
-          <Card.Img variant="top" src={props.src} />
-          <Card.Body>
-            <Card.Title>{props.Title}</Card.Title>
-            <Card.Text>{props.Text}</Card.Text>
-            <ItemCount stock={props.stock} />
-          </Card.Body>
-        </Card>
-      </div>
-    </div>
-  );
+function botonItem() {
+    return(
+    <>
+      <Button variant="warning">More Info</Button>{' '}
+    </>
+    )
 }
-
-export default Item;
+export default botonItem;

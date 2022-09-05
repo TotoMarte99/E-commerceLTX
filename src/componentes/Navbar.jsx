@@ -24,6 +24,7 @@ function Navegacion() {
               <NavDropdown.Item href="#action/3.1">Casual</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Luxury</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Digital</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">View All</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>

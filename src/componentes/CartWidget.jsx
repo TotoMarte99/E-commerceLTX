@@ -11,7 +11,7 @@ function CardWidget() {
         alt="carrito"
       ></img>
       <div className="Conteo-Carrito">
-        <small>0</small>
+        <small id='counterCart'>0</small>
       </div>
     </>
   );
