@@ -1,22 +1,23 @@
-import Card from "react-bootstrap/Card";
-import ItemCount from "./ItemCount";
-import ItemBoton from "./Item"
-function Item(props) {
-  return (
-    <div className="bg-color text-center">
-      <div className="container-watches">
-        <Card className="cards">
-          <Card.Img variant="top" src={props.src} />
-          <Card.Body>
-            <Card.Title>{props.Title}</Card.Title>
-            <Card.Text>{props.Text}</Card.Text>
-            <ItemCount stock={props.stock} />
-            <ItemBoton/>
-          </Card.Body>
-        </Card>
-      </div>
-    </div>
-  );
-}
+import { useState, useEffect } from "react";
+import Card from "./Item";
+import dataFromBD from "../utilidades/data";
+import customFetch from "../utilidades/customFetch";
 
-export default Item;
+
+function ItemListContainer() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    customFetch(2000, dataFromBD)
+      .then((datos) => setData(dataFromBD))
+      .catch((err) => console.log(err));
+  }, []);
+  return data.map((item) => (
+      <Card
+        stock={item.stock}
+        src={item.src}
+        Title={item.Title}
+        Text={item.Text}
+      />
+  ));
+}
+export default ItemListContainer;

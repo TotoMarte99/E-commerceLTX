@@ -35,6 +35,14 @@ button.btn.btn-warning {
   display: flex;
   flex-direction: column;
 }
+.img-class{
+  cursor: pointer;
+}
+.img-class:hover{
+  box-shadow: 0 0 5px #e08804;
+  border-radius: 18px;
+  
+}
 
 @media screen and (min-width: 800px) {
   .CardsBox {

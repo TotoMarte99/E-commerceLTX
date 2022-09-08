@@ -28,10 +28,49 @@ body {
 .Texto-TopProducts2:hover {
   box-shadow: 1px 8px 9px whitesmoke;
 }
+.item-detail{
+  display: flex;
+  color: white;
+  justify-content: center;
+}
+.details-product{
+  margin-left: 80px;
+}
+.img-item{
+  display: flex;
+}
+.img-styles{
+  border-radius: 12px;
+  width: 380px;
+  box-shadow: 0px 4px 8px 9px #f1bd59;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 @media screen and (min-device-width: 200px) and (max-device-width: 417px) {
   .Texto-TopProducts2 {
     font-size: 12px;
     width: 200px;
+  }
+}
+
+@media screen and (min-device-width: 200px) and (max-device-width: 773px){
+  .item-detail{
+    display: flex;
+    flex-direction: column;
+  }
+  .details-product{
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+  }
+}
+
+@media screen and (min-width:220px) and (max-width: 433px) {
+  .img-styles{
+    width: 280px;
   }
 }

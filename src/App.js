@@ -4,11 +4,10 @@ import "./App.css";
 import "./estilos/Navbar.css";
 import Vista from "./componentes/FirstImage";
 import "./estilos/ItemsListContainer.css";
-import ItemsListContainer from "./containers/ItemsListContainer";
+// import ItemsListContainer from "./containers/ItemsListContainer";
 import ImgPaymentsOptions from "./componentes/ImgPaymentsOptions";
 import "./estilos/Firstimage.css";
-
-
+import ItemDetailContainer from "./containers/ItemDetailContainer";
 function App() {
   return (
     <div>
@@ -22,8 +21,9 @@ function App() {
         <h3 className="Texto-TopProducts">TOP PRODUCTS</h3>
       </>
         <div className="CardsBox">
-        <ItemsListContainer />
+         {/* <ItemsListContainer />  */}
         </div>
+        <ItemDetailContainer />
       <>
         <a className="link_all" href="#home">
           <h3 className="Texto-TopProducts2">VIEW ALL THE PRODUCTS</h3>
