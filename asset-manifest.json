@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/E-commerceLTX/static/css/main.1e4bb79a.css",
-    "main.js": "/E-commerceLTX/static/js/main.4c084825.js",
+    "main.css": "/E-commerceLTX/static/css/main.caed0be1.css",
+    "main.js": "/E-commerceLTX/static/js/main.65f389e6.js",
     "static/media/Img.png": "/E-commerceLTX/static/media/Img.e98803a276a19572f4b9.png",
     "static/media/mediosdepago.png": "/E-commerceLTX/static/media/mediosdepago.316dacfab60fa90f01c8.png",
     "index.html": "/E-commerceLTX/index.html",
-    "main.1e4bb79a.css.map": "/E-commerceLTX/static/css/main.1e4bb79a.css.map",
-    "main.4c084825.js.map": "/E-commerceLTX/static/js/main.4c084825.js.map"
+    "main.caed0be1.css.map": "/E-commerceLTX/static/css/main.caed0be1.css.map",
+    "main.65f389e6.js.map": "/E-commerceLTX/static/js/main.65f389e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e4bb79a.css",
-    "static/js/main.4c084825.js"
+    "static/css/main.caed0be1.css",
+    "static/js/main.65f389e6.js"
   ]
 }
