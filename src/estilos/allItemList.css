@@ -1,0 +1,12 @@
+.CardsBox2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+}
+
+@media screen and (min-width: 220px) and (max-width: 822px){
+    .CardsBox2{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -72,7 +72,7 @@ function ItemCount(props) {
         +
       </Button>
       <button onClick={AddToCart} className="btn btn-warning m-2">
-        🛒
+        Add to Cart
       </button>
       <ToastContainer />
     </>

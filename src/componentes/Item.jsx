@@ -1,21 +1,17 @@
+import React from "react";
 import Card from "react-bootstrap/Card";
-import ItemCount from "./ItemCount";
-
+import { Link } from "react-router-dom";
 
 function Item(props) {
-  function prueba(){
-    alert('hola')
-  }
-
   return (
     <div className="bg-color text-center">
       <div className="container-watches">
         <Card className="cards">
-          <Card.Img onClick={prueba} className="img-class" variant="top" src={props.src} />
-          <Card.Body>
+          <Link to={`/item/${props.id}`} className="navigation">
+            <Card.Img className="img-class" variant="top" src={props.src} />
+          </Link>
+          <Card.Body className="card-body">
             <Card.Title>{props.Title}</Card.Title>
-            <Card.Text>{props.Text}</Card.Text>
-            <ItemCount stock={props.stock} />
           </Card.Body>
         </Card>
       </div>

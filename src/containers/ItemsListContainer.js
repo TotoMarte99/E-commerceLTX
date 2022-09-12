@@ -1,12 +1,21 @@
 import React from "react";
-import ItemList from "../componentes/ItemList"
+import ItemList from "../componentes/ItemList";
+import { useState, useEffect } from "react";
+import dataFromBD from "../utilidades/data";
+import customFetch from "../utilidades/customFetch";
 
-function ListItems (){
-  return(
+function ItemsListContainer() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    customFetch(2000, dataFromBD)
+      .then((datos) => setData(dataFromBD))
+      .catch((err) => console.log(err));
+  }, []);
+  return (
     <>
-      <ItemList />
+      <ItemList items={data} />
     </>
-  )
+  );
 }
 
-export default ListItems;
+export default ItemsListContainer;

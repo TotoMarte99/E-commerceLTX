@@ -1,0 +1,76 @@
+.formulario_contacto{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px;
+    
+}
+.txt-help{
+    color: white;
+    text-align: center;   
+    font-weight: 600;
+    margin-top: 30px;
+}
+.p-txt{
+    color: white;
+    
+}
+fieldset{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    padding: 20px;
+    border: 0;
+}
+
+.nombre, .apellido, .email, textarea{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    font-weight: 600;
+    padding: 12px 20px;
+    margin: 3px 0;
+    border: 1px solid gray;
+    border-radius: 4px;
+    text-align: center;
+    color: #000000;
+}
+.mandar{
+    color: black;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    font-weight: 600;
+}
+textarea{
+    outline: none;
+    color: #000000;
+}
+input:hover {
+    background-color: #ffbd59;
+    color: #000000
+}
+
+@media screen and (min-width: 220px) and (max-width: 560px){
+    .img-logo{
+        width: 310px;
+    }
+    .txt-help{
+        font-size: 20px;
+    }
+    .nombre, .apellido, .email, textarea{
+        width: 70%;
+    }
+    .mandar{
+        width: 50%;
+    }
+}
+@media screen and (min-width: 220px) and (max-width: 318px){
+    .img-logo{
+        width: 210px;
+    }
+}

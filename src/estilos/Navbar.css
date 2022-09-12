@@ -16,7 +16,13 @@
   border-radius: 8px;
   position: relative;
 }
-
+.navigation{
+  color: #9e9e9e;
+  text-decoration: none;
+}
+.navigation:hover{
+  color: #9e9e9e
+}
 @media screen and (min-device-width: 200px) and (max-device-width: 992px) {
   .btn-Login {
     margin-top: 20px;
