@@ -13,14 +13,14 @@ import ItemDetailContainer from "./containers/ItemDetailContainer";
 import { Route, Routes } from "react-router-dom";
 import Contact from "./componentes/Contact";
 import "./estilos/Contact.css"
-
+import Cart from './componentes/Cart'
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
         <Route
-          path="/"
+          path="/E-commerceLTX"
           element={
             <div>
               <Vista />
@@ -38,6 +38,7 @@ function App() {
               <AllItemList />
             </div>
           }
+          
         />
         <Route
           path="/category/all"
@@ -50,6 +51,9 @@ function App() {
         <Route path="/item/:idItem" element={<ItemDetailContainer />} />
 
         <Route path="/contact" element={<Contact />} />
+
+          <Route path="/cart" element={<Cart />} />
+        
       </Routes>
       <ImgPaymentsOptions />
     </>

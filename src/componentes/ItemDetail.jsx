@@ -1,8 +1,26 @@
-import React from "react";
+import { useState } from "react";
 import ItemCount from "./ItemCount";
 import Spinner from "../utilidades/Spinner";
+import CheckOut from "../utilidades/BtnCheckOut";
+import { toast, ToastContainer } from "react-toastify";
+import { Link } from "react-router-dom";
 
 function ItemDetail({ item }) {
+  const [itemCount, setItemCount] = useState(false);
+
+  const onAdd = (cantidad) => {
+    toast.success(`You have added ${cantidad} products`, {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
+    setItemCount(true);
+  };
+
   return (
     <>
       {item && item.src ? (
@@ -17,12 +35,19 @@ function ItemDetail({ item }) {
             <h4>${item.Price}</h4>
             <p>{item.Warranty}</p>
             <p>Stock: {item.stock}</p>
-            <ItemCount stock={item.stock} />
+            {itemCount === false ? (
+              <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
+            ) : (
+              <Link to="/cart">
+                <CheckOut />
+              </Link>
+            )}
           </div>
         </div>
       ) : (
         <Spinner />
       )}
+      <ToastContainer />
     </>
   );
 }

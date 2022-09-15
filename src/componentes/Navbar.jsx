@@ -8,66 +8,69 @@ import Button from "react-bootstrap/Button";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
 
+
 function Navegacion() {
   return (
-    <div>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand>
-            <Link to="/">
-              <img src={Logo} alt="Logo" />
-            </Link>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link>
-                <Link to="/contact" className="navigation">
-                  Contact
-                </Link>
+    <>
+      <div>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+          <Container>
+            <Navbar.Brand>
+              <Link to="/E-commerceLTX">
+                <img src={Logo} alt="Logo" />
+              </Link>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link>
+                  <Link to="/contact" className="navigation">
+                    Contact
+                  </Link>
+                </Nav.Link>
+                <NavDropdown title="Watches" id="collasible-nav-dropdown">
+                  <NavDropdown.Item>
+                    <Link to="/category/8" className="navigation">
+                      Casual
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/7" className="navigation">
+                      Luxury
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/9" className="navigation">
+                      Digital
+                    </Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/category/all" className="navigation">
+                      View All
+                    </Link>
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+              <Nav>
+                <Nav>
+                  <Button className="btn-Login" variant="outline-secondary">
+                    Login
+                  </Button>
+                </Nav>
+                <Nav>
+                  <Button className="btn-Login" variant="outline-secondary">
+                    Sing Up
+                  </Button>
+                </Nav>
+              </Nav>
+              <Nav.Link id="carrito-section">
+                <CartWidget />
               </Nav.Link>
-              <NavDropdown title="Watches" id="collasible-nav-dropdown">
-                <NavDropdown.Item>
-                  <Link to="/category/8" className="navigation">
-                    Casual
-                  </Link>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                  <Link to="/category/7" className="navigation">
-                    Luxury
-                  </Link>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                  <Link to="/category/9" className="navigation">
-                    Digital
-                  </Link>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                  <Link to="/category/all" className="navigation">
-                    View All
-                  </Link>
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-            <Nav>
-              <Nav>
-                <Button className="btn-Login" variant="outline-secondary">
-                  Login
-                </Button>
-              </Nav>
-              <Nav>
-                <Button className="btn-Login" variant="outline-secondary">
-                  Sing Up
-                </Button>
-              </Nav>
-            </Nav>
-            <Nav.Link id="carrito-section">
-              <CartWidget />
-            </Nav.Link>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </div>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      </div>
+    </>
   );
 }
 

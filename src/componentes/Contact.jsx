@@ -2,6 +2,9 @@ import React from "react";
 import img from "../imagenes/LTXwatches.jpg";
 
 function contact() {
+  const  SendButton = () =>{
+    alert('Sended')
+  }
   return (
     <>
       <h3 className="txt-help">¿How we can help you?</h3>
@@ -18,7 +21,7 @@ function contact() {
           />
           <input className="email" type="email" placeholder="Email" required />
           <textarea placeholder=""></textarea>
-          <input className="mandar" type="submit" value="Send" />
+          <input onClick={SendButton} className="mandar" type="submit" value="Send" />
         </fieldset>
       </div>
     </>

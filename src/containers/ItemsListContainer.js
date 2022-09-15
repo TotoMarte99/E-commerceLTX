@@ -4,16 +4,18 @@ import { useState, useEffect } from "react";
 import dataFromBD from "../utilidades/data";
 import customFetch from "../utilidades/customFetch";
 
-function ItemsListContainer() {
+function ItemsListContainer(item) {
   const [data, setData] = useState([]);
   useEffect(() => {
-    customFetch(2000, dataFromBD)
+    customFetch(1000, dataFromBD)
       .then((datos) => setData(dataFromBD))
       .catch((err) => console.log(err));
   }, []);
   return (
     <>
-      <ItemList items={data} />
+      <>
+        <ItemList items={data} />
+      </>
     </>
   );
 }
