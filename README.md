@@ -1,4 +1,4 @@
-E-commerceLTX
+E-commerceLTX -- Proyecto E-commerce del curso de ReactJS
 
 Primera entrega del proyecto final:
 
