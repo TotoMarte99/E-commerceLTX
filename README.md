@@ -1,15 +1,9 @@
 E-commerceLTX -- Proyecto E-commerce del curso de ReactJS
 
-!(.\public\Gift.gif)
+Entrega del desafio CartContext
 
-Primera entrega del proyecto final:
+==> El componente CartWidget tiene todas las funciones para que se puedan visualizar todos los productos en el offcanvas que sale al presionar el icono del carrito
 
-==> Al tener que mostrar 3 productos en la homepage, y luego mostrar los demas productos en las correspondientes secciones, lo que realice fue:
+==> El componente ItemForCheckOut contiene el Item que se va a mostrar en la parte del checkout, la cual se accede cuando visualizamos un producto y luego de agregar al carrito aparece el boton "checkout" el cual nos redirige a esta seccion
 
-==> Crear para estos 3 productos destacados, una data.js aparte de la del resto de productos, la cual, se puede visualizar en la carpeta utilidades. 
-  Para el resto de productos cree AllData.js, la cual es utilizada en el componenente AllitemList.jsx.
-
-==> El itemDetail es mostrado cuando se clickea sobre la imagen del producto.
-
-==> IMPORTANTE! El routing al iniciarlizar la pagina arranca la url con /E-commerceLTX/, es necesario clickear en el icono para que se visualice bien la pagina con el /, no lo modifque para no alterar la consigna de la entrega. Pero luego se modificara.
-
+==> El componente CheckOutCart hace el map de ItemFroCheckOut
