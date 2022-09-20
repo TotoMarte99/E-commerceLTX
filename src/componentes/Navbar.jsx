@@ -8,7 +8,6 @@ import Button from "react-bootstrap/Button";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
 
-
 function Navegacion() {
   return (
     <>
@@ -17,7 +16,7 @@ function Navegacion() {
           <Container>
             <Navbar.Brand>
               <Link to="/E-commerceLTX">
-                <img src={Logo} alt="Logo" />
+                <img  src={Logo} alt="Logo" />
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -45,7 +44,7 @@ function Navegacion() {
                     </Link>
                   </NavDropdown.Item>
                   <NavDropdown.Item>
-                    <Link to="/category/all" className="navigation">
+                    <Link to="/category/all" className="navigation2">
                       View All
                     </Link>
                   </NavDropdown.Item>

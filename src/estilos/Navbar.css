@@ -1,26 +1,38 @@
 .ImgCarrito-NavBar {
-  width: 25px;
-  box-shadow: 2px 2px 2px 1px rgba(77, 69, 69, 0.2);
+  width: 100%;
 }
+.btn-carrito{
+  margin-top: 20px;
+}
+
 #carrito-section {
   text-align: center;
   margin-left: 30px;
   margin-right: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .btn-Login {
   margin-left: 20px;
 }
 .Conteo-Carrito {
-  color: rgb(27, 198, 18);
+  color: white;
+  font-weight: 600;
   border-radius: 8px;
   position: relative;
+  bottom: 70px;
+  left: 25px;
+  font-size: 28px;
 }
 .navigation{
   color: #9e9e9e;
   text-decoration: none;
 }
-.navigation:hover{
+.navigation2{
+  color: #9e9e9e;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.navigation:hover, .navigation2:hover{
   color: #9e9e9e
 }
 @media screen and (min-device-width: 200px) and (max-device-width: 992px) {

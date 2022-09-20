@@ -1,24 +1,27 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ItemCount from "./ItemCount";
 import Spinner from "../utilidades/Spinner";
 import CheckOut from "../utilidades/BtnCheckOut";
 import { toast, ToastContainer } from "react-toastify";
 import { Link } from "react-router-dom";
+import { DataContext } from "../context/CartContext";
 
 function ItemDetail({ item }) {
-  const [itemCount, setItemCount] = useState(false);
+  const [itemCount, setItemCount] = useState(0);
+  const { addItems } = useContext(DataContext);
 
-  const onAdd = (cantidad) => {
-    toast.success(`You have added ${cantidad} products`, {
+  const onAdd = (Amount) => {
+    toast.success(`You have added ${Amount} products`, {
       position: "top-right",
-      autoClose: 2000,
+      autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: false,
       draggable: true,
       progress: undefined,
     });
-    setItemCount(true);
+    setItemCount(Amount);
+    addItems(item, Amount);
   };
 
   return (
@@ -35,10 +38,10 @@ function ItemDetail({ item }) {
             <h4>${item.Price}</h4>
             <p>{item.Warranty}</p>
             <p>Stock: {item.stock}</p>
-            {itemCount === false ? (
+            {itemCount === 0 ? (
               <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
             ) : (
-              <Link to="/cart">
+              <Link to="/category/cartCheckOut">
                 <CheckOut />
               </Link>
             )}

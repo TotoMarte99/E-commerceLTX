@@ -10,6 +10,7 @@ const AllDataProducts = [
     Price: 56,
     Warranty: "1 year warranty",
     categoryID: 9,
+    Amount: 1,
     category: {
       name: "Digital",
       id: 9,
@@ -24,6 +25,7 @@ const AllDataProducts = [
     Price: 76,
     Warranty: "1 year warranty",
     categoryID: 9,
+    Amount: 1,
     category: {
       name: "Digital",
       id: 9,
@@ -38,6 +40,7 @@ const AllDataProducts = [
     Price: 50,
     Warranty: "1 year warranty",
     categoryID: 9,
+    Amount: 1,
     category: {
       name: "Digital",
       id: 9,
@@ -51,6 +54,7 @@ const AllDataProducts = [
     Text: "Water Resistant, +7 years battery duration, calendary, sport functions",
     Price: 55,
     categoryID: 8,
+    Amount: 1,
     Warranty: "1 year warranty",
     category: {
       name: "Casual",
@@ -66,6 +70,7 @@ const AllDataProducts = [
     Price: 65,
     Warranty: "1 year warranty",
     categoryID: 8,
+    Amount: 1,
     category: {
       name: "Casual",
       id: 8,
@@ -80,6 +85,7 @@ const AllDataProducts = [
     Price: 115,
     Warranty: "1 year warranty",
     categoryID: 8,
+    Amount: 1,
     category: {
       name: "Casual",
       id: 8,
@@ -94,6 +100,7 @@ const AllDataProducts = [
     Price: 80,
     Warranty: "1 year warranty",
     categoryID: 8,
+    Amount: 1,
     category: {
       name: "Casual",
       id: 8,
@@ -108,6 +115,7 @@ const AllDataProducts = [
     Price: 35000,
     Warranty: "3 year warranty",
     categoryID: 7,
+    Amount: 1,
     category: {
       name: "Luxury",
       id: 7,
@@ -122,6 +130,7 @@ const AllDataProducts = [
     Price: 20000,
     Warranty: "3 year warranty",
     categoryID: 7,
+    Amount: 1,
     category: {
       name: "Luxury",
       id: 7,
@@ -136,6 +145,7 @@ const AllDataProducts = [
     Price: 61000,
     Warranty: "3 year warranty",
     categoryID: 7,
+    Amount: 1,
     category: {
       name: "Luxury",
       id: 7,
@@ -150,6 +160,7 @@ const AllDataProducts = [
     Price: 71000,
     Warranty: "3 year warranty",
     categoryID: 7,
+    Amount: 1,
     category: {
       name: "Luxury",
       id: 7,
@@ -164,6 +175,7 @@ const AllDataProducts = [
     Price: 21000,
     Warranty: "3 year warranty",
     categoryID: 7,
+    Amount: 1,
     category: {
       name: "Luxury",
       id: 7,

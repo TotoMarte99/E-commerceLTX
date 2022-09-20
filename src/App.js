@@ -3,20 +3,22 @@ import Navbar from "./componentes/Navbar";
 import "./App.css";
 import "./estilos/Navbar.css";
 import "./estilos/allItemList.css";
-import Vista from "./componentes/FirstImage";
+import Vista from "./paginas/FirstImage";
 import "./estilos/ItemsListContainer.css";
 import ItemsListContainer from "./containers/ItemsListContainer";
-import ImgPaymentsOptions from "./componentes/ImgPaymentsOptions";
+import ImgPaymentsOptions from "./paginas/ImgPaymentsOptions";
 import AllItemList from "./componentes/AllitemList";
 import "./estilos/Firstimage.css";
 import ItemDetailContainer from "./containers/ItemDetailContainer";
 import { Route, Routes } from "react-router-dom";
-import Contact from "./componentes/Contact";
-import "./estilos/Contact.css"
-import Cart from './componentes/Cart'
+import Contact from "./paginas/Contact";
+import "./estilos/Contact.css";
+import DataProvider from "./context/CartContext";
+import CheckOutCart from "./componentes/CheckOutCart";
+
 function App() {
   return (
-    <>
+    <DataProvider>
       <Navbar />
       <Routes>
         <Route
@@ -38,7 +40,6 @@ function App() {
               <AllItemList />
             </div>
           }
-          
         />
         <Route
           path="/category/all"
@@ -52,11 +53,19 @@ function App() {
 
         <Route path="/contact" element={<Contact />} />
 
-          <Route path="/cart" element={<Cart />} />
-        
+        <Route
+          path="/cart"
+          element={
+            <div className="CardsBox2">
+              <AllItemList />
+            </div>
+          }
+        />
+
+        <Route path="/category/cartCheckOut" element={<CheckOutCart />} />
       </Routes>
       <ImgPaymentsOptions />
-    </>
+    </DataProvider>
   );
 }
 export default App;
