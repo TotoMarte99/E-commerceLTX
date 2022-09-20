@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/E-commerceLTX/static/css/main.0ea92f1a.css",
-    "main.js": "/E-commerceLTX/static/js/main.fb2fb55e.js",
+    "main.js": "/E-commerceLTX/static/js/main.64719145.js",
     "static/media/Img.png": "/E-commerceLTX/static/media/Img.e98803a276a19572f4b9.png",
     "static/media/mediosdepago.png": "/E-commerceLTX/static/media/mediosdepago.316dacfab60fa90f01c8.png",
     "static/media/LTXwatches.jpg": "/E-commerceLTX/static/media/LTXwatches.358e7219fe59f16605d9.jpg",
     "index.html": "/E-commerceLTX/index.html",
     "main.0ea92f1a.css.map": "/E-commerceLTX/static/css/main.0ea92f1a.css.map",
-    "main.fb2fb55e.js.map": "/E-commerceLTX/static/js/main.fb2fb55e.js.map"
+    "main.64719145.js.map": "/E-commerceLTX/static/js/main.64719145.js.map"
   },
   "entrypoints": [
     "static/css/main.0ea92f1a.css",
-    "static/js/main.fb2fb55e.js"
+    "static/js/main.64719145.js"
   ]
 }
