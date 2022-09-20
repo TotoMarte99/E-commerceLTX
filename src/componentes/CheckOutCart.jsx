@@ -7,7 +7,7 @@ function CartCheckOut() {
 
   return (
     <>
-    <h1 className="Texto-TopProducts">YOUR CHECKOUT CART</h1>
+    <h1 className="Texto-TopProducts">YOUR SHOPPING CART</h1>
       {items.map((item) => (
         <div className="div-checkoutCart2">
         <ItemsCart

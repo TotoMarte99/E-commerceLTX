@@ -10,7 +10,7 @@ function ItemDetailContainer() {
 
   useEffect(() => {
     customFetch(
-      2000,
+      1000,
       dataFromBD.find((item) => item.id === parseInt(idItem))
     )
       .then((result) => setData(result))
