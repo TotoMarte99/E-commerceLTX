@@ -5,6 +5,7 @@ import CheckOut from "../utilidades/BtnCheckOut";
 import { toast, ToastContainer } from "react-toastify";
 import { Link } from "react-router-dom";
 import { DataContext } from "../context/CartContext";
+import Button from "react-bootstrap/Button";
 
 function ItemDetail({ item }) {
   const [itemCount, setItemCount] = useState(0);
@@ -44,7 +45,11 @@ function ItemDetail({ item }) {
               <Link to="/category/cartCheckOut">
                 <CheckOut />
               </Link>
+              
             )}
+            <Link to="/category/all">
+            <Button className="btn btn-warning">More Products</Button>
+          </Link>
           </div>
         </div>
       ) : (

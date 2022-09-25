@@ -146,7 +146,7 @@ body {
   font-weight: 600;
 }
 
-@media screen and (min-device-width: 200px) and (max-device-width: 672px){
+@media screen and (min-device-width: 200px) and (max-device-width: 700px){
   .foto-carrito{
     display: flex;
     flex-direction: column;

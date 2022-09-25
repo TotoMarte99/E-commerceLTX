@@ -39,9 +39,42 @@ const DataProvider = ({ children }) => {
     setItems(items.filter((product) => product.id !== id));
   };
 
+  const totalOfProducts = () =>
+    items.reduce(
+      (acumulador, productoActual) => acumulador + productoActual.Amount,
+      0
+    );
+
+  const totalPrice = () => {
+    return items.reduce((prev, act) => prev + act.Amount * act.Price, 0);
+  };
+
+  const totalTaxes = () => {
+    return Math.round(totalPrice() * 0.21);
+  };
+
+  const discount = () => {
+    return Math.round (totalTaxes() * 15 / 100);
+  };
+
+  const TotalCount = () => {
+    return Math.round( totalPrice() + totalTaxes() - discount() );
+  }
+
   return (
     <DataContext.Provider
-      value={{ items, addItems, Clear, ClearProduct, isInCart }}
+      value={{
+        items,
+        addItems,
+        Clear,
+        ClearProduct,
+        isInCart,
+        totalOfProducts,
+        totalPrice,
+        totalTaxes,
+        discount,
+        TotalCount,
+      }}
     >
       {children}
     </DataContext.Provider>

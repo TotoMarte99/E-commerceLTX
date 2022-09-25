@@ -14,6 +14,7 @@ function Example() {
 
   const { items } = useContext(DataContext);
   const { Clear } = useContext(DataContext);
+  const {totalOfProducts} = useContext(DataContext);
 
   return (
     <>
@@ -26,7 +27,7 @@ function Example() {
         />
       </Button>
       <div className="Conteo-Carrito">
-        <small id="counterCart">0</small>
+        <small id="counterCart">{totalOfProducts() || "0"}</small>
       </div>
 
       <Offcanvas show={show} onHide={handleClose}>
@@ -50,7 +51,7 @@ function Example() {
         </Offcanvas.Body>
         <div className="container-btns">
           <Link to="/category/cartCheckOut" className="navigation">
-            <Button variant="outline-warning" className="m-2">
+            <Button  className="btn btn-warning m-2">
               Go to CheckOut
             </Button>
           </Link>
