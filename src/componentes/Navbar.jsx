@@ -16,7 +16,7 @@ function Navegacion() {
           <Container>
             <Navbar.Brand>
               <Link to="/E-commerceLTX">
-                <img  src={Logo} alt="Logo" />
+                <img  src={Logo} alt="Logo1" />
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
