@@ -7,7 +7,6 @@ import Vista from "./paginas/FirstImage";
 import "./estilos/ItemsListContainer.css";
 import ItemsListContainer from "./containers/ItemsListContainer";
 import ImgPaymentsOptions from "./paginas/ImgPaymentsOptions";
-import AllItemList from "./componentes/AllitemList";
 import "./estilos/Firstimage.css";
 import ItemDetailContainer from "./containers/ItemDetailContainer";
 import { Route, Routes } from "react-router-dom";
@@ -15,7 +14,7 @@ import Contact from "./paginas/Contact";
 import "./estilos/Contact.css";
 import DataProvider from "./context/CartContext";
 import CheckOutCart from "./componentes/CheckOutCart";
-
+import Sections from "./componentes/Sections"
 function App() {
   return (
     <DataProvider>
@@ -26,9 +25,9 @@ function App() {
           element={
             <div>
               <Vista />
-              <h3 className="Texto-TopProducts">TOP PRODUCTS</h3>
+              <h3 className="Texto-TopProducts">SEE OUR WATCHES COLLECTION</h3>
               <div className="CardsBox">
-                <ItemsListContainer />
+                <Sections />
               </div>
             </div>
           }
@@ -37,7 +36,7 @@ function App() {
           path="/category/:idCategory"
           element={
             <div className="CardsBox2">
-              <AllItemList />
+              <ItemsListContainer />
             </div>
           }
         />
@@ -45,7 +44,7 @@ function App() {
           path="/category/all"
           element={
             <div className="CardsBox2">
-              <AllItemList />
+              <ItemsListContainer />
             </div>
           }
         />
@@ -57,7 +56,7 @@ function App() {
           path="/cart"
           element={
             <div className="CardsBox2">
-              <AllItemList />
+              <ItemsListContainer />
             </div>
           }
         />

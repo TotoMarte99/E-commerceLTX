@@ -1,21 +1,19 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CardDetail from "../componentes/ItemDetail";
-import dataFromBD from "../utilidades/AllData";
-import customFetch from "../utilidades/customFetch";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 
 function ItemDetailContainer() {
-  const [dato, setData] = useState({});
+  const [data, setData] = useState({});
   const { idItem } = useParams();
 
   useEffect(() => {
-    customFetch(
-      1000,
-      dataFromBD.find((item) => item.id === parseInt(idItem))
-    )
-      .then((result) => setData(result))
-      .catch((err) => console.log(err));
+    const querydb = getFirestore();
+    const queryDoc = doc(querydb, "products", idItem);
+    getDoc(queryDoc)
+    .then(res => setData({id: res.id, ...res.data()}))
   }, [idItem]);
-  return <CardDetail item={dato} />;
+
+  return <CardDetail item={data} />;
 }
 export default ItemDetailContainer;

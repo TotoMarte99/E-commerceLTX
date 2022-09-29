@@ -1,0 +1,91 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+.secciones_grid {
+  background-color: rgb(79, 79, 79);
+  display: grid;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "izquierdo izquierdo principal"
+    "footer footer principal";
+}
+
+.header {
+  grid-area: header;
+  background-image: url("https://i.postimg.cc/R0pqHzy3/pexels-quang-viet-nguyen-9848539.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  height: 180px;
+}
+.menuIzquierdo {
+  grid-area: izquierdo;
+  background-image: url("https://i.postimg.cc/BvKRxTwx/pexels-valentin-antonucci-691640.jpg");
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.principal {
+  grid-area: principal;
+  background-image: url("https://i.postimg.cc/fT1KYG4r/pexels-antony-trivet-9982625.jpg");
+  padding: 20px;
+  width: 400px;
+  background-position: center;
+}
+footer {
+  grid-area: footer;
+  background-image: url("https://i.postimg.cc/Gtf0Cd7C/pexels-czapp-rp-d-10321027.jpg");
+  padding: 20px;
+  background-position: center;
+}
+
+.navigation3 {
+  color: yellow;
+  text-decoration: none;
+}
+.navigation3:hover {
+  color: yellow;
+}
+h1 {
+  color: #f1bd59;
+  
+}
+
+@media all and (max-width: 1000px) {
+  .secciones_grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-areas:
+      "header header header"
+      "izquierdo izquierdo izquierdo"
+      "footer footer principal";
+  }
+}
+
+@media all and (max-width: 600px) {
+  .secciones_grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "header"
+      "izquierdo"
+      "principal"
+      "footer";
+  }
+  .principal {
+    width: auto;
+    text-align: end;
+  }
+  .header{
+    text-align: end;
+  }
+ 
+}

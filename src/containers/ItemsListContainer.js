@@ -1,27 +1,51 @@
-import React from "react";
-import ItemList from "../componentes/ItemList";
 import { useState, useEffect } from "react";
-import dataFromBD from "../utilidades/data";
-import customFetch from "../utilidades/customFetch";
-import Spinner from "../utilidades/Spinner";
+import Card from "../componentes/Item";
+import { useParams } from "react-router-dom";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  query,
+  where,
+} from "firebase/firestore";
 
-function ItemsListContainer(item) {
+function AllItemListContainer() {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { idCategory } = useParams();
 
   useEffect(() => {
-    customFetch(2000, dataFromBD)
-      .then(datos => { setData(dataFromBD)
-      setLoading(false); })
-      .catch((err) => console.log(err));
-  }, []);
+    const querydb = getFirestore();
+    const queryCollection = collection(querydb, "products");
+    if (idCategory) {
+      const queryFilter = query(
+        queryCollection,
+        where("categoryID", "==", parseInt(idCategory))
+      );
+      getDocs(queryFilter).then((res) =>
+        setData(
+          res.docs.map((product) => ({ id: product.id, ...product.data() }))
+        )
+      );
+    } else {
+      getDocs(queryCollection).then((res) =>
+        setData(
+          res.docs.map((product) => ({ id: product.id, ...product.data() }))
+        )
+      );
+    }
+  }, [idCategory]);
 
-
-  return (
+  return data.map((item) => (
     <>
-      { loading ? <Spinner/> : <ItemList items={data} /> }
+      <Card
+        key={item.id}
+        id={item.id}
+        stock={item.stock}
+        src={item.src}
+        Title={item.Title}
+        Text={item.Text}
+      />
     </>
-  );
+  ));
 }
-
-export default ItemsListContainer;
+export default AllItemListContainer;

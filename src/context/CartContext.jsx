@@ -34,6 +34,18 @@ const DataProvider = ({ children }) => {
       div.style.margin = "15px 15px 10px 10px";
     }
   };
+  const Clear2 = () => {
+    setItems([]);
+    let div = document.getElementById("Cart-empty2");
+    if ([]) {
+      div.innerHTML = "Your cart is empty...";
+      div.style.textAlign = "center";
+      div.style.color = "white"
+      div.style.fontSize = "25px";
+      div.style.fontWeight = "600";
+      
+    }
+  };
 
   const ClearProduct = (id) => {
     setItems(items.filter((product) => product.id !== id));
@@ -74,6 +86,8 @@ const DataProvider = ({ children }) => {
         totalTaxes,
         discount,
         TotalCount,
+        Clear2
+        
       }}
     >
       {children}

@@ -7,23 +7,26 @@ import "../estilos/ItemForCheckOut.css";
 
 function CartCheckOut() {
   const { items } = useContext(DataContext);
-  const { Clear } = useContext(DataContext);
+  const { Clear2 } = useContext(DataContext);
   const { totalPrice } = useContext(DataContext);
   const { totalTaxes } = useContext(DataContext);
   const { discount } = useContext(DataContext);
   const { TotalCount } = useContext(DataContext);
+  
   return (
+    
     <>
       <div>
         <div className="botones">
           <Link to="/category/all">
             <Button className="btn btn-warning">VIEW MORE PRODUCTS</Button>
           </Link>
-          <Button className="btn btn-warning" onClick={Clear}>
+          <Button className="btn btn-warning" onClick={Clear2}>
             CLEAR ALL THE CART
           </Button>
         </div>
         <h1 className="Texto-TopProducts">LIST OF ITEMS</h1>
+        <div id="Cart-empty2"></div>
         {items.map((item) => (
           <ItemsCart
             key={item.id}

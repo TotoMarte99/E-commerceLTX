@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
+
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function ItemCount({ stock = 0, onAdd }) {
   const [rate, setRate] = useState(0);
+
 
   //Boton aumento de cantidad//
   const handleClickUp = () => {
@@ -37,7 +39,7 @@ function ItemCount({ stock = 0, onAdd }) {
           Add to Cart
         </Button>
       ) : (
-        <Button variant="outline-warning" className="m-2" disabled>
+        <Button  variant="outline-warning" className="m-2" disabled>
           Add to Cart
         </Button>
       )}
