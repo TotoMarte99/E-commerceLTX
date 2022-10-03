@@ -19,7 +19,7 @@ function CartCheckOut() {
       <div>
         <div className="botones">
           <Link to="/category/all">
-            <Button className="btn btn-warning">VIEW MORE PRODUCTS</Button>
+            <Button className="btn btn-warning">SEE MORE PRODUCTS</Button>
           </Link>
           <Button className="btn btn-warning" onClick={Clear2}>
             CLEAR ALL THE CART
