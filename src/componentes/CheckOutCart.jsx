@@ -3,7 +3,10 @@ import ItemsCart from "./ItemForCheckOut";
 import { DataContext } from "../context/CartContext";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import { serverTimestamp, doc, setDoc, collection, updateDoc, increment } from "firebase/firestore";
 import "../estilos/ItemForCheckOut.css";
+import db from "../utilidades/FireBaseConfig";
+import toast, { Toaster } from "react-hot-toast";
 
 function CartCheckOut() {
   const { items } = useContext(DataContext);
@@ -12,9 +15,41 @@ function CartCheckOut() {
   const { totalTaxes } = useContext(DataContext);
   const { discount } = useContext(DataContext);
   const { TotalCount } = useContext(DataContext);
-  
+
+  const createOrder = async () => {
+    let itemsForDb = items.map((item) => ({
+      id: item.id,
+      title: item.Title,
+      quantity: item.Amount,
+    }));
+    let order = {
+      buyer: {
+        name: "Tomas Martelon",
+        email: "tomM@gmail.com",
+        phone: "123-456-1234",
+      },
+      date: serverTimestamp(),
+      products: itemsForDb,
+      total: TotalCount(),
+    };
+    // console.log(order)
+    const newOrderReference = doc(collection(db, "orders"));
+    await setDoc(newOrderReference, order);
+    toast.success('Your Order has been created, please take note of your order ID' + newOrderReference.id, {
+      style: {
+        backgroundColor: "#000",
+        color: "white",
+      }
+    })
+    Clear2()
+    itemsForDb.map(async (item) => {
+      const itemRef = doc(db, "products", item.id)
+      await updateDoc(itemRef, {
+        stock: increment(-item.quantity) 
+      })
+    })
+  };
   return (
-    
     <>
       <div>
         <div className="botones">
@@ -58,8 +93,19 @@ function CartCheckOut() {
           <h3>${TotalCount()}</h3>
         </div>
         <div className="endOrder">
-          <Button variant="success">FINISH THE ORDER</Button>
+          <Button onClick={createOrder} variant="success">
+            FINISH THE ORDER
+          </Button>
         </div>
+        <Toaster 
+          position= "top-center"
+          reverseOrder= {false}
+          gutter= {8}
+          toastOptions= {{
+            duration: 5000,
+
+          }}
+        />
       </div>
     </>
   );

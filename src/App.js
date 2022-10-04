@@ -15,6 +15,7 @@ import "./estilos/Contact.css";
 import DataProvider from "./context/CartContext";
 import CheckOutCart from "./componentes/CheckOutCart";
 import Sections from "./componentes/Sections"
+
 function App() {
   return (
     <DataProvider>

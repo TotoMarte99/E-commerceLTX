@@ -10,10 +10,13 @@ function ItemDetailContainer() {
   useEffect(() => {
     const querydb = getFirestore();
     const queryDoc = doc(querydb, "products", idItem);
-    getDoc(queryDoc)
-    .then(res => setData({id: res.id, ...res.data()}))
+    getDoc(queryDoc).then((res) => setData({ id: res.id, ...res.data() }));
   }, [idItem]);
 
-  return <CardDetail item={data} />;
+  return (
+    <>
+      <CardDetail item={data} />
+    </>
+  );
 }
 export default ItemDetailContainer;

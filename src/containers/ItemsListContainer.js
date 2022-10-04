@@ -8,14 +8,19 @@ import {
   query,
   where,
 } from "firebase/firestore";
+import Spinner from '../utilidades/Spinner'
 
 function AllItemListContainer() {
   const [data, setData] = useState([]);
   const { idCategory } = useParams();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const querydb = getFirestore();
     const queryCollection = collection(querydb, "products");
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
     if (idCategory) {
       const queryFilter = query(
         queryCollection,
@@ -37,14 +42,18 @@ function AllItemListContainer() {
 
   return data.map((item) => (
     <>
-      <Card
-        key={item.id}
-        id={item.id}
-        stock={item.stock}
-        src={item.src}
-        Title={item.Title}
-        Text={item.Text}
-      />
+      {loading ? (
+        <Spinner />
+      ) : (
+        <Card
+          key={item.id}
+          id={item.id}
+          stock={item.stock}
+          src={item.src}
+          Title={item.Title}
+          Text={item.Text}
+        />
+      )}
     </>
   ));
 }
