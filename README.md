@@ -1,9 +1,54 @@
-E-commerceLTX -- Proyecto E-commerce del curso de ReactJS
 
-Entrega del desafio CartContext
+# LTX WATCHES E-COMMERCE
 
-==> El componente CartWidget tiene todas las funciones para que se puedan visualizar todos los productos en el offcanvas que sale al presionar el icono del carrito
+Ltx Watches es un proyecto personal construido en el transcurso de la cursada del curso de ReactJS de CoderHouse
 
-==> El componente ItemForCheckOut contiene el Item que se va a mostrar en la parte del checkout, la cual se accede cuando visualizamos un producto y luego de agregar al carrito aparece el boton "checkout" el cual nos redirige a esta seccion
 
-==> El componente CheckOutCart hace el map de ItemFroCheckOut
+
+## Tecnologias Implementadas
+
+React JS - React Boostrap  
+
+
+
+## Pre Visualización
+![](https://media.giphy.com/media/ITssafUg5zcP1oI49P/giphy.gif)
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
+
+
+## Correr Pagina Localmente
+
+Clonar el proyecto
+
+```bash
+  git clone https://link-to-project
+```
+
+Ir a la direccion del proyecto
+
+```bash
+  cd my-project
+```
+
+Instalar dependencias
+
+```bash
+  npm install
+```
+
+Inicializar servidor
+
+```bash
+  npm run start
+```
+
+
+## Feedback
+
+Si gustan en darme un Feedback sobre el proyecto les dejo mi email tomascmartelon@gmail.com
+
